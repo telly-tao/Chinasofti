@@ -10,9 +10,7 @@ public class DbUtil {
 	private static final String URL = "jdbc:mysql://127.0.0.1:3306/db_test?useUnicode=true&characterEncoding=UTF8";
 	private static final String USER = "root";
 	private static final String PASSWORD = "root";
-	public void DbUtil(){
-		
-	}
+	//public void DbUtil(){}
 	private Connection getConnection() {
 		Connection conn = null;
 		try {
@@ -28,7 +26,8 @@ public class DbUtil {
 	/**
 	 * 
 	 * @param sql
-	 * @return
+	 * @return 查询结果集
+	 * 
 	 */
 	Connection con = null;
 	Statement smt = null;
@@ -60,9 +59,9 @@ public class DbUtil {
 		}
 	}
 	/**
-	 * 请求数据库
+	 * 
 	 * @param sql
-	 * @return
+	 * @return 是否更新成功
 	 */
 	public int update(String sql) {
 		Connection con =null;
@@ -76,7 +75,6 @@ public class DbUtil {
 			//创建适配器
 			smt=con.createStatement();
 			//创建并获取数据集executeQuery执行不做修改的操作，返回数据集，executeUpdate执行对数据有改动的语句，返回受影响的条数。
-			//ResultSet rs=smt.executeQuery(sql);
 			result=smt.executeUpdate(sql);
 			//提交事务
 			con.commit();

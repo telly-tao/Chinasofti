@@ -63,6 +63,7 @@ public class EmpControllerImpl {
 		else {
 			System.out.println("ÐÞ¸ÄÊ§°Ü£¡");
 		}
+		
 	}
 	@Test
 	public void testDalete() {
