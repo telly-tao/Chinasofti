@@ -12,6 +12,7 @@ public class DbUtil {
 	private static final String PASSWORD = "root";
 	public void DbUtil(){
 		
+		
 	}
 	private Connection getConnection() {
 		Connection conn = null;
