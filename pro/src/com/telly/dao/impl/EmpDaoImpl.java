@@ -15,15 +15,15 @@ import com.telly.dao.EmpDao;
 import com.telly.model.Dept;
 import com.telly.model.Emp;
 import com.telly.util.DbUtil;
+import com.telly.util.IDbUtil;
 
 public class EmpDaoImpl implements EmpDao {
 	@Override
 	public List<Emp> query(String name) {
 		List<Emp> list = new ArrayList<Emp>();
-		DbUtil db = new DbUtil();
+		IDbUtil db = new DbUtil();
 		String sql = "Select * from emp where ename like '%" + name + "%'";
 		ResultSet rs = db.query(sql);
-		db.closeQurey();
 		try {
 			while (rs.next()) {
 				Emp emp = new Emp();
@@ -41,14 +41,17 @@ public class EmpDaoImpl implements EmpDao {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			db.closeQurey();
 		}
+		
 		return list;
 	}
 
 	@Override
 	public int insert(Map map) {
 
-		DbUtil db = new DbUtil();
+		IDbUtil db = new DbUtil();
 		int empno = (int) map.get("empno");
 		String ename = (String) map.get("ename");
 		String job = (String) map.get("job");
@@ -69,12 +72,11 @@ public class EmpDaoImpl implements EmpDao {
 			
 		}
 		return result;
-	
 	}
 
 	@Override
 	public int update(Map map) {
-		DbUtil db=new DbUtil();
+		IDbUtil db=new DbUtil();
 		int empno=(int)map.get("empno");
 		int mgr=(int)map.get("mgr");
 		String sql="update emp set mgr="+mgr+" where empno="+empno+";";
@@ -83,7 +85,7 @@ public class EmpDaoImpl implements EmpDao {
 
 	@Override
 	public int delete(int id) {
-		DbUtil db =new DbUtil();
+		IDbUtil db =new DbUtil();
 		int empno=id;
 		String sql="delete from emp where empno="+empno+"";
 		return db.update(sql);

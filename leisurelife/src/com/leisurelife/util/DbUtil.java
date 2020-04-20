@@ -1,4 +1,4 @@
-package com.telly.util;
+package com.leisurelife.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

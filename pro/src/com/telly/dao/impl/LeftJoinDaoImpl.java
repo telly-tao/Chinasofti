@@ -9,12 +9,13 @@ import com.telly.dao.LeftJoinDao;
 import com.telly.model.Dept;
 import com.telly.model.Emp;
 import com.telly.util.DbUtil;
+import com.telly.util.IDbUtil;
 
 public class LeftJoinDaoImpl implements LeftJoinDao{
 	@Override
 	public List<String> leftJoin() {
 		List<String> list=new ArrayList<String>();
-		DbUtil data=new DbUtil();
+		IDbUtil data=new DbUtil();
 		String sql="SELECT * FROM emp e LEFT JOIN dept d ON e.deptno=d.deptno;";
 		ResultSet rs=data.query(sql);
 		try {
@@ -38,6 +39,9 @@ public class LeftJoinDaoImpl implements LeftJoinDao{
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		finally {
+			data.closeQurey();
 		}
 		return list;
 	}
