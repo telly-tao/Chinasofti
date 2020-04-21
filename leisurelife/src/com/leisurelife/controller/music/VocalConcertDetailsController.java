@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.alibaba.fastjson.JSON;
 import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
+import com.leisurelife.service.impl.music.VocalConcertDetailsServiceImpl;
+import com.leisurelife.service.music.VocalConcertDetailsService;
 @WebServlet("mvcd")
 public class VocalConcertDetailsController extends HttpServlet {
 
@@ -35,9 +37,9 @@ public class VocalConcertDetailsController extends HttpServlet {
 		request.put("cid", req.getParameter("cid"));
 		
 		//获取处理结果
-		LoginService login=new LoginServiceImpl();
+		VocalConcertDetailsService vcds=new VocalConcertDetailsServiceImpl();
 		List<Object> result=new ArrayList<Object>();
-		result=login.loginRequest(request);
+		result=vcds.vocalConcertRequest(request);
 		
 		//提交处理结果
 		PrintWriter out =resp.getWriter();

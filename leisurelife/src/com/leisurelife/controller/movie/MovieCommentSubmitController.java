@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.alibaba.fastjson.JSON;
 import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
+import com.leisurelife.service.impl.movie.MovieCommentSubmitServiceImpl;
+import com.leisurelife.service.movie.MovieCommentSubmitService;
 @WebServlet("mmcsc")
 public class MovieCommentSubmitController extends HttpServlet {
 
@@ -38,9 +40,9 @@ public class MovieCommentSubmitController extends HttpServlet {
 		request.put("username", req.getParameter("username"));
 		
 		//获取处理结果
-		LoginService login=new LoginServiceImpl();
+		MovieCommentSubmitService mcss=new MovieCommentSubmitServiceImpl();
 		List<Object> result=new ArrayList<Object>();
-		result=login.loginRequest(request);
+		result=mcss.movieCommentSubmitRequest(request);
 		
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
