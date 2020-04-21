@@ -1,8 +1,8 @@
-package com.leisurelife.service.music;
+package com.leisurelife.dao.music;
 
 import java.util.List;
 import java.util.Map;
 
-public interface VocalConcertDetailsService {
+public interface VocalConcertDetailsDao {
 	public List<Object> vocalConcertDetailsRequest(Map<String,Object> map);
 }

@@ -1,11 +1,9 @@
-package com.leisurelife.service.impl.music;
+package com.leisurelife.dao.impl.music;
 
 import java.util.List;
 import java.util.Map;
 
-import com.leisurelife.service.music.VocalConcertListService;
-
-public class VocalConcertListServiceImpl implements VocalConcertListService {
+public class VocalConcertListDao implements com.leisurelife.dao.music.VocalConcertListDao {
 
 	@Override
 	public List<Object> vocalConcertListRequest(Map<String, Object> map) {

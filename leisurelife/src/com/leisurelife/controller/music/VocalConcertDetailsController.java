@@ -39,7 +39,7 @@ public class VocalConcertDetailsController extends HttpServlet {
 		//获取处理结果
 		VocalConcertDetailsService vcds=new VocalConcertDetailsServiceImpl();
 		List<Object> result=new ArrayList<Object>();
-		result=vcds.vocalConcertRequest(request);
+		result=vcds.vocalConcertDetailsRequest(request);
 		
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
