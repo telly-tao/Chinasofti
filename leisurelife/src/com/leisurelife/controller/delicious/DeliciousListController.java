@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("ddl")
 public class DeliciousListController extends HttpServlet {
 
+	private static final long serialVersionUID = 3127481716348368480L;
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub

@@ -32,8 +32,6 @@ public class MovieListController extends HttpServlet {
 		//获取请求数据
 		Map<String,Object> request =new HashMap<String,Object>();
 		request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
-		request.put("username", req.getParameter("username"));
-		request.put("password", req.getParameter("password"));
 		
 		//获取处理结果
 		LoginService login=new LoginServiceImpl();

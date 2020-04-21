@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("tbod")
 public class BeijingOperaDetialsController extends HttpServlet {
 
+	private static final long serialVersionUID = 6321056538076868236L;
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub

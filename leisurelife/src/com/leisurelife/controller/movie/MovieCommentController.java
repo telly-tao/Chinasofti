@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,10 +16,10 @@ import javax.servlet.http.HttpServletResponse;
 import com.alibaba.fastjson.JSON;
 import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
+@WebServlet("mmcc")
+public class MovieCommentController extends HttpServlet {
 
-public class MovieCommentSubmitComtroller extends HttpServlet {
-
-	private static final long serialVersionUID = 6246155383014622248L;
+	private static final long serialVersionUID = -816389183445419587L;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -31,8 +32,8 @@ public class MovieCommentSubmitComtroller extends HttpServlet {
 		//获取请求数据
 		Map<String,Object> request =new HashMap<String,Object>();
 		request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
-		request.put("username", req.getParameter("username"));
-		request.put("password", req.getParameter("password"));
+		request.put("mid", req.getParameter("mid"));
+		request.put("type", Integer.parseInt(req.getParameter("tyep")));
 		
 		//获取处理结果
 		LoginService login=new LoginServiceImpl();
@@ -45,4 +46,5 @@ public class MovieCommentSubmitComtroller extends HttpServlet {
 		out.flush();
 		out.close();
 	}
+
 }

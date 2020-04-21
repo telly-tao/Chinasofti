@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("tmdd")
 public class ModernDramaDetialsController extends HttpServlet {
 
+	private static final long serialVersionUID = 7835021161811317344L;
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
