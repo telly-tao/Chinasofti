@@ -1,0 +1,131 @@
+28-Aug-2018 10:38:20.240 警告 [main] org.apache.tomcat.util.digester.SetPropertiesRule.begin [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:asset' did not find a matching property.
+28-Aug-2018 10:38:20.262 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.44
+28-Aug-2018 10:38:20.262 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          May 10 2017 17:21:09 UTC
+28-Aug-2018 10:38:20.262 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.44.0
+28-Aug-2018 10:38:20.263 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Aug-2018 10:38:20.263 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Aug-2018 10:38:20.263 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Aug-2018 10:38:20.263 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\Tools\Java\jdk1.8.0_111\jre
+28-Aug-2018 10:38:20.263 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_111-b14
+28-Aug-2018 10:38:20.263 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Aug-2018 10:38:20.264 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Tools\apache-tomcat-8.0.44
+28-Aug-2018 10:38:20.264 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Tools\apache-tomcat-8.0.44
+28-Aug-2018 10:38:20.265 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Tools\apache-tomcat-8.0.44\conf\logging.properties
+28-Aug-2018 10:38:20.267 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Aug-2018 10:38:20.267 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Aug-2018 10:38:20.267 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Aug-2018 10:38:20.269 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\Tools\apache-tomcat-8.0.44\endorsed
+28-Aug-2018 10:38:20.270 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Tools\apache-tomcat-8.0.44
+28-Aug-2018 10:38:20.271 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Tools\apache-tomcat-8.0.44
+28-Aug-2018 10:38:20.271 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Tools\apache-tomcat-8.0.44\temp
+28-Aug-2018 10:38:20.272 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.12 using APR version 1.5.2.
+28-Aug-2018 10:38:20.273 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+28-Aug-2018 10:38:21.092 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2k  26 Jan 2017)
+28-Aug-2018 10:38:21.242 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-8888"]
+28-Aug-2018 10:38:21.258 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+28-Aug-2018 10:38:21.261 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1577 ms
+28-Aug-2018 10:38:21.301 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+28-Aug-2018 10:38:21.302 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.44
+28-Aug-2018 10:38:25.176 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Aug-2018 10:38:25.288 信息 [localhost-startStop-1] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+28-Aug-2018 10:38:25.410 信息 [localhost-startStop-1] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Tue Aug 28 10:38:25 CST 2018]; root of context hierarchy
+28-Aug-2018 10:38:25.486 信息 [localhost-startStop-1] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from class path resource [spring.xml]
+28-Aug-2018 10:38:25.801 信息 [localhost-startStop-1] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from class path resource [spring-hibernate.xml]
+28-Aug-2018 10:38:26.677 信息 [localhost-startStop-1] com.alibaba.druid.pool.DruidDataSource.info {dataSource-1} inited
+28-Aug-2018 10:38:27.369 INFO [localhost-startStop-1] org.hibernate.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+28-Aug-2018 10:38:27.397 INFO [localhost-startStop-1] org.hibernate.Version.logVersion HHH000412: Hibernate Core {4.1.7.Final}
+28-Aug-2018 10:38:27.403 INFO [localhost-startStop-1] org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+28-Aug-2018 10:38:27.407 INFO [localhost-startStop-1] org.hibernate.cfg.Environment.buildBytecodeProvider HHH000021: Bytecode provider name : javassist
+28-Aug-2018 10:38:28.645 INFO [localhost-startStop-1] org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+28-Aug-2018 10:38:28.689 INFO [localhost-startStop-1] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator.initiateService HHH000399: Using default transaction strategy (direct JDBC transactions)
+28-Aug-2018 10:38:28.709 INFO [localhost-startStop-1] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory.<init> HHH000397: Using ASTQueryTranslatorFactory
+28-Aug-2018 10:38:29.377 信息 [localhost-startStop-1] org.springframework.orm.hibernate4.HibernateTransactionManager.afterPropertiesSet Using DataSource [{
+	CreateTime:"2018-08-28 10:38:26",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:1,
+	ConnectCount:1,
+	Connections:[
+		{ID:17147565, ConnectTime:"2018-08-28 10:38:28", UseCount:1, LastActiveTime:"2018-08-28 10:38:28"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+28-Aug-2018 10:38:29.608 信息 [localhost-startStop-1] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 4319 ms
+28-Aug-2018 10:38:29.914 信息 [localhost-startStop-1] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider.info Parsing configuration file [struts-default.xml]
+28-Aug-2018 10:38:30.084 信息 [localhost-startStop-1] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider.info Parsing configuration file [struts-plugin.xml]
+28-Aug-2018 10:38:30.107 信息 [localhost-startStop-1] com.opensymphony.xwork2.config.providers.XmlConfigurationProvider.info Parsing configuration file [struts.xml]
+28-Aug-2018 10:38:30.112 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (spring) for (com.opensymphony.xwork2.ObjectFactory)
+28-Aug-2018 10:38:30.113 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.FileManager)
+28-Aug-2018 10:38:30.114 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.conversion.impl.XWorkConverter)
+28-Aug-2018 10:38:30.115 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.TextProvider)
+28-Aug-2018 10:38:30.116 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.ActionProxyFactory)
+28-Aug-2018 10:38:30.117 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.conversion.ObjectTypeDeterminer)
+28-Aug-2018 10:38:30.118 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (org.apache.struts2.dispatcher.mapper.ActionMapper)
+28-Aug-2018 10:38:30.121 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (jakarta) for (org.apache.struts2.dispatcher.multipart.MultiPartRequest)
+28-Aug-2018 10:38:30.123 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (org.apache.struts2.views.freemarker.FreemarkerManager)
+28-Aug-2018 10:38:30.126 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (org.apache.struts2.components.UrlRenderer)
+28-Aug-2018 10:38:30.126 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.validator.ActionValidatorManager)
+28-Aug-2018 10:38:30.127 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.util.ValueStackFactory)
+28-Aug-2018 10:38:30.128 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionProvider)
+28-Aug-2018 10:38:30.129 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.util.reflection.ReflectionContextFactory)
+28-Aug-2018 10:38:30.130 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.util.PatternMatcher)
+28-Aug-2018 10:38:30.136 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (org.apache.struts2.dispatcher.StaticContentLoader)
+28-Aug-2018 10:38:30.138 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (com.opensymphony.xwork2.UnknownHandlerManager)
+28-Aug-2018 10:38:30.141 信息 [localhost-startStop-1] org.apache.struts2.config.BeanSelectionProvider.info Choosing bean (struts) for (org.apache.struts2.views.util.UrlHelper)
+28-Aug-2018 10:38:30.166 信息 [localhost-startStop-1] org.apache.struts2.spring.StrutsSpringObjectFactory.info Initializing Struts-Spring integration...
+28-Aug-2018 10:38:30.166 信息 [localhost-startStop-1] com.opensymphony.xwork2.spring.SpringObjectFactory.info Setting autowire strategy to name
+28-Aug-2018 10:38:30.169 信息 [localhost-startStop-1] org.apache.struts2.spring.StrutsSpringObjectFactory.info ... initialized Struts-Spring integration successfully
+28-Aug-2018 10:38:30.662 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Tools\apache-tomcat-8.0.44\webapps\docs
+28-Aug-2018 10:38:30.710 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Tools\apache-tomcat-8.0.44\webapps\docs has finished in 47 ms
+28-Aug-2018 10:38:30.710 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Tools\apache-tomcat-8.0.44\webapps\examples
+28-Aug-2018 10:38:31.030 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Tools\apache-tomcat-8.0.44\webapps\examples has finished in 320 ms
+28-Aug-2018 10:38:31.031 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Tools\apache-tomcat-8.0.44\webapps\host-manager
+28-Aug-2018 10:38:31.061 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Tools\apache-tomcat-8.0.44\webapps\host-manager has finished in 30 ms
+28-Aug-2018 10:38:31.061 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Tools\apache-tomcat-8.0.44\webapps\manager
+28-Aug-2018 10:38:31.102 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Tools\apache-tomcat-8.0.44\webapps\manager has finished in 41 ms
+28-Aug-2018 10:38:31.103 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Tools\apache-tomcat-8.0.44\webapps\ROOT
+28-Aug-2018 10:38:31.128 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Tools\apache-tomcat-8.0.44\webapps\ROOT has finished in 25 ms
+28-Aug-2018 10:38:31.134 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-8888"]
+28-Aug-2018 10:38:31.161 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+28-Aug-2018 10:38:31.167 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 9905 ms
+28-Aug-2018 10:40:32.873 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.44
+28-Aug-2018 10:40:32.878 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          May 10 2017 17:21:09 UTC
+28-Aug-2018 10:40:32.878 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.44.0
+28-Aug-2018 10:40:32.878 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+28-Aug-2018 10:40:32.878 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+28-Aug-2018 10:40:32.879 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Aug-2018 10:40:32.879 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\Tools\Java\jdk1.8.0_111\jre
+28-Aug-2018 10:40:32.879 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_111-b14
+28-Aug-2018 10:40:32.880 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Aug-2018 10:40:32.880 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Tools\apache-tomcat-8.0.44
+28-Aug-2018 10:40:32.881 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Tools\apache-tomcat-8.0.44
+28-Aug-2018 10:40:32.882 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Tools\apache-tomcat-8.0.44\conf\logging.properties
+28-Aug-2018 10:40:32.883 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Aug-2018 10:40:32.883 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Aug-2018 10:40:32.883 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Aug-2018 10:40:32.883 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\Tools\apache-tomcat-8.0.44\endorsed
+28-Aug-2018 10:40:32.884 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Tools\apache-tomcat-8.0.44
+28-Aug-2018 10:40:32.885 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Tools\apache-tomcat-8.0.44
+28-Aug-2018 10:40:32.886 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Tools\apache-tomcat-8.0.44\temp
+28-Aug-2018 10:40:32.888 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.12 using APR version 1.5.2.
+28-Aug-2018 10:40:32.890 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+28-Aug-2018 10:40:33.543 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2k  26 Jan 2017)
+28-Aug-2018 10:40:33.669 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-8888"]
+28-Aug-2018 10:40:33.685 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+28-Aug-2018 10:40:33.687 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1259 ms
+28-Aug-2018 10:40:33.724 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+28-Aug-2018 10:40:33.725 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.44
+28-Aug-2018 10:40:34.135 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Tools\apache-tomcat-8.0.44\webapps\docs
+28-Aug-2018 10:40:34.174 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Tools\apache-tomcat-8.0.44\webapps\docs has finished in 38 ms
+28-Aug-2018 10:40:34.177 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Tools\apache-tomcat-8.0.44\webapps\examples
+28-Aug-2018 10:40:34.522 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Tools\apache-tomcat-8.0.44\webapps\examples has finished in 344 ms
+28-Aug-2018 10:40:34.522 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Tools\apache-tomcat-8.0.44\webapps\host-manager
+28-Aug-2018 10:40:34.561 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Tools\apache-tomcat-8.0.44\webapps\host-manager has finished in 39 ms
+28-Aug-2018 10:40:34.562 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Tools\apache-tomcat-8.0.44\webapps\manager
+28-Aug-2018 10:40:34.593 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Tools\apache-tomcat-8.0.44\webapps\manager has finished in 31 ms
+28-Aug-2018 10:40:34.595 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Tools\apache-tomcat-8.0.44\webapps\ROOT
+28-Aug-2018 10:40:34.623 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Tools\apache-tomcat-8.0.44\webapps\ROOT has finished in 29 ms
+28-Aug-2018 10:40:34.628 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-8888"]
+28-Aug-2018 10:40:34.642 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+28-Aug-2018 10:40:34.650 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 961 ms

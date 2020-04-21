@@ -18,7 +18,7 @@ import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
 import com.leisurelife.service.impl.music.VocalConcertListServiceImpl;
 import com.leisurelife.service.music.VocalConcertListService;
-@WebServlet("mvcl")
+//@WebServlet("mvcl")
 public class VocalConcertListController extends HttpServlet {
 
 	private static final long serialVersionUID = -3239875443876470805L;

@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet("tbol")
+//@WebServlet("tbol")
 public class BeijingOperaListController extends HttpServlet {
 
 	private static final long serialVersionUID = -8966464068940087856L;

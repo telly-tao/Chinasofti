@@ -1,0 +1,16 @@
+127.0.0.1 - - [23/Aug/2019:14:58:50 +0800] "GET / HTTP/1.1" 200 11452
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:52 +0800] "GET /manager/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/page/login.do HTTP/1.1" 200 2772
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources/css/style.css HTTP/1.1" 200 176094
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources/js/jquery-2.1.1.js HTTP/1.1" 200 84244
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources/css/animate.css HTTP/1.1" 200 69082
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources/css/bootstrap.min.css HTTP/1.1" 200 121200
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources/font-awesome/css/font-awesome.css HTTP/1.1" 200 28747
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources/js/plugins/validate/jquery.validate.min.js HTTP/1.1" 200 21525
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources/css/plugins/ladda/ladda-themeless.min.css HTTP/1.1" 200 7710
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources//js/bootstrap.min.js HTTP/1.1" 200 37045
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources/js/plugins/ladda/ladda.jquery.min.js HTTP/1.1" 200 577
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources/js/plugins/ladda/ladda.min.js HTTP/1.1" 200 3410
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /manager/resources/js/plugins/ladda/spin.min.js HTTP/1.1" 200 4123
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:14:58:53 +0800] "GET /favicon.ico HTTP/1.1" 200 21630
+127.0.0.1 - - [23/Aug/2019:15:29:29 +0800] "GET / HTTP/1.1" 200 11452

@@ -18,7 +18,7 @@ import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
 import com.leisurelife.service.impl.movie.MovieCommentSubmitServiceImpl;
 import com.leisurelife.service.movie.MovieCommentSubmitService;
-@WebServlet("mmcsc")
+//@WebServlet("mmcsc")
 public class MovieCommentSubmitController extends HttpServlet {
 
 	private static final long serialVersionUID = 6246155383014622248L;

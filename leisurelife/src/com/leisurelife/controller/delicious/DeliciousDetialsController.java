@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet("ddd")
+//@WebServlet("ddd")
 public class DeliciousDetialsController extends HttpServlet {
 
 	private static final long serialVersionUID = 3760023533225823794L;

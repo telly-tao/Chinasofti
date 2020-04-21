@@ -18,7 +18,7 @@ import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
 import com.leisurelife.service.impl.movie.MoviceDetialsServiceImpl;
 import com.leisurelife.service.movie.MoviceDetialsService;
-@WebServlet("mmd")
+//@WebServlet("mmd")
 public class MoviceDetialsController extends HttpServlet {
 
 	private static final long serialVersionUID = 5828548786637575733L;

@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-@WebServlet("tmdd")
+//@WebServlet("tmdd")
 public class ModernDramaDetialsController extends HttpServlet {
 
 	private static final long serialVersionUID = 7835021161811317344L;

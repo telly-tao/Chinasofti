@@ -18,7 +18,7 @@ import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
 import com.leisurelife.service.impl.movie.MovieListServiceImpl;
 import com.leisurelife.service.movie.MovieListService;
-@WebServlet("mml")
+//@WebServlet("mml")
 public class MovieListController extends HttpServlet {
 
 	private static final long serialVersionUID = 4405718835789337528L;

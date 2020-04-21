@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.alibaba.fastjson.JSON;
 import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
-@WebServlet("login")
+@WebServlet("/dealcmd")
 public class LoginController extends HttpServlet {
 
 	private static final long serialVersionUID = -8043293461953776895L;
@@ -28,13 +28,13 @@ public class LoginController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		System.out.println("方法执行了！");
 		//获取请求数据
 		Map<String,Object> request =new HashMap<String,Object>();
-		request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
+		request.put("cmd", req.getParameter("cmd"));
 		request.put("username", req.getParameter("username"));
 		request.put("password", req.getParameter("password"));
-		
+		System.out.println(request);
 		//获取处理结果
 		LoginService login=new LoginServiceImpl();
 		List<Object> result=new ArrayList<Object>();
