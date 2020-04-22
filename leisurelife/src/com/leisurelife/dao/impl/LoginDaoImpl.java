@@ -6,13 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+
+import com.leisurelife.controller.LoginController;
 import com.leisurelife.dao.LoginDao;
 import com.leisurelife.model.User;
 import com.leisurelife.util.DbUtil;
 import com.leisurelife.util.IDbUtil;
 
 public class LoginDaoImpl implements LoginDao{
-
+	private static Logger logger=Logger.getLogger(LoginDaoImpl.class);
 	@Override
 	public List<Object> loginRequest(Map<String, Object> map) {
 		IDbUtil db=new DbUtil();
@@ -32,7 +35,7 @@ public class LoginDaoImpl implements LoginDao{
 				list.add(user);
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
+			logger.error(e.getStackTrace());
 		}
 		db.closeQurey();
 		return list;

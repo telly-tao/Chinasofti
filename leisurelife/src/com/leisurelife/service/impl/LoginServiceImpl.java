@@ -5,12 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+
 import com.leisurelife.dao.LoginDao;
 import com.leisurelife.dao.impl.LoginDaoImpl;
 import com.leisurelife.service.LoginService;
 
 public class LoginServiceImpl implements LoginService {
-
+	private static Logger logger=Logger.getLogger(LoginServiceImpl.class);
 	@Override
 	public Map<String,Object> loginRequest(Map<String,Object> map) {
 		
@@ -18,8 +20,7 @@ public class LoginServiceImpl implements LoginService {
 		List<Object> source =new ArrayList<Object>();
 		//获取结果
 		source = login.loginRequest(map);
-		System.out.println(":"+source.get(0));
-		
+		logger.info(source.get(0));
 		Map<String,Object> result =new HashMap<String,Object>();
 		int cmd;
 		int code;
@@ -29,7 +30,7 @@ public class LoginServiceImpl implements LoginService {
 			result.put("cmd",cmd);
 			result.put("code",code);
 		}
-		System.out.println("service result:"+result);
+		logger.info("service result:"+result);
 		return result;
 	}
 

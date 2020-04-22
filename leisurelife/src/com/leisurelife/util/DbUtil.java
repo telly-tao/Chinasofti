@@ -7,11 +7,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.apache.log4j.Logger;
+
+import com.leisurelife.service.impl.LoginServiceImpl;
+
 public class DbUtil implements IDbUtil {
 	private static final String URL = "jdbc:mysql://127.0.0.1:3306/life?useUnicode=true&characterEncoding=UTF8";
 	private static final String USER = "root";
 	private static final String PASSWORD = "root";
 	private static final String DRIVER="com.mysql.jdbc.Driver";
+	private static Logger logger=Logger.getLogger(DbUtil.class);
 	private Connection con = null;
 	private Statement stm = null;
 	private PreparedStatement pstm=null;
@@ -27,8 +32,9 @@ public class DbUtil implements IDbUtil {
 			Class.forName(DRIVER);
 			// 创建连接对象
 			con = DriverManager.getConnection(URL, USER, PASSWORD);
+			logger.info("Connection to sql Succesd！");
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error(e.getStackTrace());
 		}
 		return con;
 	}
@@ -51,7 +57,7 @@ public class DbUtil implements IDbUtil {
 			
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error(e.getStackTrace());
 		} 
 		return rs;
 	}
@@ -68,7 +74,7 @@ public class DbUtil implements IDbUtil {
 			// 创建并获取数据集executeQuery执行不做修改的操作，返回数据集，executeUpdate执行对数据有改动的语句，返回受影响的条数。
 			rs = pstm.executeQuery();
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error(e.getStackTrace());
 		} 
 		return rs;
 	}
@@ -80,7 +86,7 @@ public class DbUtil implements IDbUtil {
 			stm.close();
 			con.close();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			logger.error(e.getStackTrace());
 		}
 	}
 	/**
@@ -91,7 +97,7 @@ public class DbUtil implements IDbUtil {
 			pstm.close();
 			con.close();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			logger.error(e.getStackTrace());
 		}
 	}
 	/**
@@ -113,9 +119,9 @@ public class DbUtil implements IDbUtil {
 				//回滚事务
 				con.rollback();
 			} catch (SQLException e1) {
-				e1.printStackTrace();
+				logger.error(e1.getStackTrace());
 			}
-			System.out.println(e);
+			logger.error(e.getStackTrace());
 
 		}
 		finally {
@@ -148,9 +154,9 @@ public class DbUtil implements IDbUtil {
 				//回滚事务
 				con.rollback();
 			} catch (SQLException e1) {
-				e1.printStackTrace();
+				logger.error(e1.getStackTrace());
 			}
-			System.out.println(e);
+			logger.error(e.getStackTrace());
 
 		}
 		finally {
@@ -167,7 +173,7 @@ public class DbUtil implements IDbUtil {
 		try {
 			smt.close();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			logger.error(e.getStackTrace());
 		}
 	}
 	/**
@@ -178,7 +184,7 @@ public class DbUtil implements IDbUtil {
 		try {
 			smt.close();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			logger.error(e.getStackTrace());
 		}
 	}
 	/**
@@ -189,7 +195,7 @@ public class DbUtil implements IDbUtil {
 		try {
 			c.close();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			logger.error(e.getStackTrace());
 		}
 	}
 }
