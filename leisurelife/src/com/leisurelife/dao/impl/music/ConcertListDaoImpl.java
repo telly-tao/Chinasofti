@@ -18,7 +18,7 @@ public class ConcertListDaoImpl implements ConcertListDao {
 	private static Logger logger=Logger.getLogger(ConcertListDaoImpl.class);
 	@Override
 	public List<Music> concertListRequest() {
-		Music music=new Music();
+		
 		IDbUtil db =new DbUtil();
 		String sql="select * from music;";
 		ResultSet rs=db.query(sql);
@@ -26,6 +26,7 @@ public class ConcertListDaoImpl implements ConcertListDao {
 		List<Music> result=new ArrayList<Music>();
 		try {
 			while(rs.next()) {
+				Music music=new Music();
 				music.setMusicid(rs.getInt("musicid"));
 				music.setAddress(rs.getString("address"));
 				music.setCalls(rs.getString("calls"));
@@ -37,7 +38,6 @@ public class ConcertListDaoImpl implements ConcertListDao {
 				music.setPrice(rs.getString("price"));
 				music.setTime(rs.getString("time"));
 				result.add(music);
-				System.out.println("Dao music"+music.toString());
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -46,7 +46,6 @@ public class ConcertListDaoImpl implements ConcertListDao {
 		finally {
 			db.closeQurey();
 		}
-		System.out.println("Dao result:"+result);
 		return result;
 	}
 

@@ -9,7 +9,8 @@ public class ConcertDetailsDaoImpl implements ConcertDetailsDao {
 
 	@Override
 	public List<Object> concertDetailsRequest(Map<String, Object> map) {
-		// TODO Auto-generated method stub
+		map.get("mid");
+		
 		return null;
 	}
 

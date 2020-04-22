@@ -4,5 +4,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface ConcertDetailsService {
-	public List<Object> concertDetailsRequest(Map<String,Object> map);
+	public String concertDetailsRequest(Map<String,Object> map);
 }

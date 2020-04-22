@@ -19,7 +19,6 @@ public class LoginDaoImpl implements LoginDao{
 	@Override
 	public List<User> loginRequest(Map<String, Object> map) {
 		IDbUtil db=new DbUtil();
-		User user=new User();
 		List<User> list=new ArrayList<User>();
 		String username=map.get("username").toString();
 		String password=map.get("password").toString();
@@ -28,6 +27,7 @@ public class LoginDaoImpl implements LoginDao{
 		ResultSet rs=db.query(sql);
 		try {
 			while(rs.next()) {
+				User user=new User();
 				user.setUserid(rs.getInt("userid"));
 				user.setUsername(rs.getString("username"));
 				user.setPassword(rs.getString("password"));

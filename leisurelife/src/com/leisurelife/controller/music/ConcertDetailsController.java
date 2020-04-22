@@ -28,21 +28,20 @@ public class ConcertDetailsController extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		//获取请求数据
 		Map<String,Object> request =new HashMap<String,Object>();
 		request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
 		request.put("mid", req.getParameter("mid"));
-		
+		System.out.println("request:"+request);
 		//获取处理结果
 		ConcertDetailsService cds=new ConcertDetailsServiceImpl();
-		List<Object> result=new ArrayList<Object>();
-		result=cds.concertDetailsRequest(request);
-		
+		String result=cds.concertDetailsRequest(request);
+		System.out.println(result);
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
-		out.write(JSON.toJSONString(result));
+		out.write(result);
 		out.flush();
 		out.close();
 	}

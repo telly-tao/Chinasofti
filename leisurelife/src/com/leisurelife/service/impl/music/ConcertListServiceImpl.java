@@ -24,18 +24,20 @@ public class ConcertListServiceImpl implements ConcertListService {
 		Map<String, Object> result = new HashMap<String, Object>();
 		Map<String, Object> re = new HashMap<String, Object>();
 		List<String> list=new ArrayList<String>();
-		for (Music so : source) {
-			re.put("mid", so.getMusicid());
-			re.put("name", so.getName());
-			re.put("image", so.getImage());
-			re.put("time", so.getTime());
-			re.put("addr", so.getAddress());
-			list.add(JSON.toJSONString(re));
-		}
+		
 		if (source != null) {
 			result.put("cmd", map.get("cmd"));
 			result.put("code", 0);
+			for (Music so : source) {
+				re.put("mid", so.getMusicid());
+				re.put("name", so.getName());
+				re.put("image", so.getImage());
+				re.put("time", so.getTime());
+				re.put("addr", so.getAddress());
+				list.add(JSON.toJSONString(re));
+			}
 			result.put("list", list);
+			
 			ConvertToJSON json=new ConvertToJSON();
 			String jsonString = json.ConvertToJSON(result.toString());
 			System.out.println("Service result:"+jsonString);
