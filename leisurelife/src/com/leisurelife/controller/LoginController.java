@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.alibaba.fastjson.JSON;
 import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
-@WebServlet("/dealcmd")
+
 public class LoginController extends HttpServlet {
 
 	private static final long serialVersionUID = -8043293461953776895L;
@@ -34,12 +33,11 @@ public class LoginController extends HttpServlet {
 		request.put("cmd", req.getParameter("cmd"));
 		request.put("username", req.getParameter("username"));
 		request.put("password", req.getParameter("password"));
-		System.out.println(request);
 		//获取处理结果
 		LoginService login=new LoginServiceImpl();
-		List<Object> result=new ArrayList<Object>();
+		Map<String,Object> result=new HashMap<String,Object>();
 		result=login.loginRequest(request);
-		
+		System.out.println("controller result:"+JSON.toJSONString(result));
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
 		out.write(JSON.toJSONString(result));
