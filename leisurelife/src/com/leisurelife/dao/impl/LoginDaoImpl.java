@@ -17,10 +17,10 @@ import com.leisurelife.util.IDbUtil;
 public class LoginDaoImpl implements LoginDao{
 	private static Logger logger=Logger.getLogger(LoginDaoImpl.class);
 	@Override
-	public List<Object> loginRequest(Map<String, Object> map) {
+	public List<User> loginRequest(Map<String, Object> map) {
 		IDbUtil db=new DbUtil();
 		User user=new User();
-		List<Object> list=new ArrayList<Object>();
+		List<User> list=new ArrayList<User>();
 		String username=map.get("username").toString();
 		String password=map.get("password").toString();
 		//从数据库获取数据

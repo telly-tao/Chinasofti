@@ -34,15 +34,14 @@ public class LoginController extends HttpServlet {
 		request.put("cmd", req.getParameter("cmd"));
 		request.put("username", req.getParameter("username"));
 		request.put("password", req.getParameter("password"));
+		System.out.println("request1111:"+request);
 		logger.info("request:"+request);
 		//获取处理结果
 		LoginService login=new LoginServiceImpl();
-		Map<String,Object> result=new HashMap<String,Object>();
-		result=login.loginRequest(request);
-		logger.info("controller result:"+JSON.toJSONString(result));
+		String result=login.loginRequest(request);
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
-		out.write(JSON.toJSONString(result));
+		out.write(result);
 		out.flush();
 		out.close();
 	}

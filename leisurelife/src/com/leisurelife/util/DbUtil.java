@@ -34,6 +34,7 @@ public class DbUtil implements IDbUtil {
 			con = DriverManager.getConnection(URL, USER, PASSWORD);
 			logger.info("Connection to sql Succesd！");
 		} catch (Exception e) {
+			e.printStackTrace();
 			logger.error(e.getStackTrace());
 		}
 		return con;
@@ -57,6 +58,7 @@ public class DbUtil implements IDbUtil {
 			
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			logger.error(e.getStackTrace());
 		} 
 		return rs;
@@ -74,6 +76,7 @@ public class DbUtil implements IDbUtil {
 			// 创建并获取数据集executeQuery执行不做修改的操作，返回数据集，executeUpdate执行对数据有改动的语句，返回受影响的条数。
 			rs = pstm.executeQuery();
 		} catch (Exception e) {
+			e.printStackTrace();
 			logger.error(e.getStackTrace());
 		} 
 		return rs;
@@ -86,6 +89,7 @@ public class DbUtil implements IDbUtil {
 			stm.close();
 			con.close();
 		} catch (SQLException e) {
+			e.printStackTrace();
 			logger.error(e.getStackTrace());
 		}
 	}
@@ -97,6 +101,7 @@ public class DbUtil implements IDbUtil {
 			pstm.close();
 			con.close();
 		} catch (SQLException e) {
+			e.printStackTrace();
 			logger.error(e.getStackTrace());
 		}
 	}
@@ -119,8 +124,10 @@ public class DbUtil implements IDbUtil {
 				//回滚事务
 				con.rollback();
 			} catch (SQLException e1) {
+				e1.printStackTrace();
 				logger.error(e1.getStackTrace());
 			}
+			e.printStackTrace();
 			logger.error(e.getStackTrace());
 
 		}
@@ -154,8 +161,10 @@ public class DbUtil implements IDbUtil {
 				//回滚事务
 				con.rollback();
 			} catch (SQLException e1) {
+				e1.printStackTrace();
 				logger.error(e1.getStackTrace());
 			}
+			e.printStackTrace();
 			logger.error(e.getStackTrace());
 
 		}
@@ -173,6 +182,7 @@ public class DbUtil implements IDbUtil {
 		try {
 			smt.close();
 		} catch (SQLException e) {
+			e.printStackTrace();
 			logger.error(e.getStackTrace());
 		}
 	}
@@ -184,6 +194,7 @@ public class DbUtil implements IDbUtil {
 		try {
 			smt.close();
 		} catch (SQLException e) {
+			e.printStackTrace();
 			logger.error(e.getStackTrace());
 		}
 	}
@@ -195,6 +206,7 @@ public class DbUtil implements IDbUtil {
 		try {
 			c.close();
 		} catch (SQLException e) {
+			e.printStackTrace();
 			logger.error(e.getStackTrace());
 		}
 	}

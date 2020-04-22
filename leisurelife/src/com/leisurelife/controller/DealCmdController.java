@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.leisurelife.controller.music.ConcertListController;
 @WebServlet("/dealcmd")
 public class DealCmdController extends HttpServlet {
 
@@ -25,6 +27,9 @@ public class DealCmdController extends HttpServlet {
 		}else if(req.getParameter("cmd").equals("1")) {
 			RegisterController register=new RegisterController();
 			register.doPost(req, resp);
+		}else if(req.getParameter("cmd").equals("501")) {
+			ConcertListController concertList=new ConcertListController();
+			concertList.doPost(req, resp);
 		}
 		
 	}
