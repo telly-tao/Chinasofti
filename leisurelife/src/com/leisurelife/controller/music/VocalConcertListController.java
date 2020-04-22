@@ -16,7 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.alibaba.fastjson.JSON;
 import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
+import com.leisurelife.service.impl.music.ConcertListServiceImpl;
 import com.leisurelife.service.impl.music.VocalConcertListServiceImpl;
+import com.leisurelife.service.music.ConcertListService;
 import com.leisurelife.service.music.VocalConcertListService;
 //@WebServlet("mvcl")
 public class VocalConcertListController extends HttpServlet {
@@ -29,20 +31,19 @@ public class VocalConcertListController extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		//获取请求数据
 		Map<String,Object> request =new HashMap<String,Object>();
 		request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
 		
 		//获取处理结果
-		VocalConcertListService vcls=new VocalConcertListServiceImpl();
-		List<Object> result=new ArrayList<Object>();
-		result=vcls.vocalConcertListRequest(request);
+		ConcertListService cls=new ConcertListServiceImpl();
+		String result=cls.concertListRequest(request);
 		
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
-		out.write(JSON.toJSONString(result));
+		out.write(result);
 		out.flush();
 		out.close();
 	}

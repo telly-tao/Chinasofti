@@ -19,7 +19,7 @@ import com.leisurelife.service.impl.LoginServiceImpl;
 import com.leisurelife.service.impl.movie.MoviceDetialsServiceImpl;
 import com.leisurelife.service.movie.MoviceDetialsService;
 //@WebServlet("mmd")
-public class MoviceDetialsController extends HttpServlet {
+public class MovieDetailsController extends HttpServlet {
 
 	private static final long serialVersionUID = 5828548786637575733L;
 
@@ -29,7 +29,7 @@ public class MoviceDetialsController extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		//获取请求数据
 		Map<String,Object> request =new HashMap<String,Object>();

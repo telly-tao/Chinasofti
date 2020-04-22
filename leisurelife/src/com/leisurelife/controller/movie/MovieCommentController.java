@@ -29,7 +29,7 @@ public class MovieCommentController extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		//获取请求数据
 		Map<String,Object> request =new HashMap<String,Object>();

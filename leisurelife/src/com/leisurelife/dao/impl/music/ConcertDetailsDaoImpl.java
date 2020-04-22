@@ -9,8 +9,6 @@ public class ConcertDetailsDaoImpl implements ConcertDetailsDao {
 
 	@Override
 	public List<Object> concertDetailsRequest(Map<String, Object> map) {
-		map.get("mid");
-		
 		return null;
 	}
 
