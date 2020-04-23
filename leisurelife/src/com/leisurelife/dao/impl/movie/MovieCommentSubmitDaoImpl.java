@@ -17,7 +17,7 @@ public class MovieCommentSubmitDaoImpl implements MovieCommentSubmitDao {
 		IDbUtil db =new DbUtil();
 		Date d=new Date();
 		SimpleDateFormat ft=new SimpleDateFormat("yyyy-MM-dd");
-		//列
+		//接收数据列表
 		String date=ft.format(d);
 		int mid=Integer.parseInt(map.get("mid").toString());
 		int type=Integer.parseInt(map.get("type").toString());
@@ -26,6 +26,7 @@ public class MovieCommentSubmitDaoImpl implements MovieCommentSubmitDao {
 		//sql语句
 		String sql="insert into Recommend(username,time,content,type,tid) values ('"+username+"',"
 				+ "'"+date+"','"+content+"',"+type+","+mid+");";
+		//获取执行结果
 		int result=db.update(sql);
 		System.out.println("sql:"+sql+"执行结果:"+result);
 		return result;

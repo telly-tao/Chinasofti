@@ -24,7 +24,7 @@ public class MovieCommentDaoImpl implements MovieCommentDao {
 		int mid=Integer.parseInt( map.get("mid").toString());
 		String sql="select * from Recommend where tid="+mid+" and type="+type+";";
 		ResultSet rs=db.query(sql);
-		
+		//将从数据库获取的数据集存取模型对象列表中
 		List<Recommend> result=new ArrayList<Recommend>();
 		try {
 			while(rs.next()) {

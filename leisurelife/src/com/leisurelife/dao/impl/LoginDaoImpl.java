@@ -12,7 +12,11 @@ import com.leisurelife.dao.LoginDao;
 import com.leisurelife.model.User;
 import com.leisurelife.util.DbUtil;
 import com.leisurelife.util.IDbUtil;
-
+/**
+ * 
+ * @author Administrator
+ *
+ */
 public class LoginDaoImpl implements LoginDao{
 	private static Logger logger=Logger.getLogger(LoginDaoImpl.class);
 	@Override
