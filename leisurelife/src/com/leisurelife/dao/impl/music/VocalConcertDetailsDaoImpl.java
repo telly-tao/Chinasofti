@@ -7,7 +7,6 @@ public class VocalConcertDetailsDaoImpl implements com.leisurelife.dao.music.Voc
 
 	@Override
 	public List<Object> vocalConcertDetailsRequest(Map<String, Object> map) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

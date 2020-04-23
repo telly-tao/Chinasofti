@@ -13,12 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.alibaba.fastjson.JSON;
-import com.leisurelife.service.LoginService;
-import com.leisurelife.service.impl.LoginServiceImpl;
 import com.leisurelife.service.impl.music.VocalConcertListServiceImpl;
 import com.leisurelife.service.music.VocalConcertListService;
-//@WebServlet("mvcl")
+
 public class VocalConcertListController extends HttpServlet {
 
 	private static final long serialVersionUID = -3239875443876470805L;
@@ -38,7 +35,6 @@ public class VocalConcertListController extends HttpServlet {
 		//获取处理结果
 		VocalConcertListService vcls=new VocalConcertListServiceImpl();
 		String result=vcls.vocalConcertListRequest(request);
-		
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
 		out.write(result);

@@ -21,7 +21,7 @@ public class VocalConcertListServiceImpl implements VocalConcertListService {
 
 	@Override
 	public String vocalConcertListRequest(Map<String, Object> map) {
-	
+
 		VocalConcertListDao vcld = new VocalConcertListDaoImpl();
 			List<Concert> source = new ArrayList<Concert>();
 			source = vcld.vocalConcertListRequest();
@@ -51,5 +51,6 @@ public class VocalConcertListServiceImpl implements VocalConcertListService {
 				result.put("code", 1);
 				return JSON.toJSONString(result);
 			}
+
 	}
 }

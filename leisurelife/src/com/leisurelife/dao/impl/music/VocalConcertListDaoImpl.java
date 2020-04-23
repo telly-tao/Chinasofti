@@ -18,9 +18,8 @@ public class VocalConcertListDaoImpl implements com.leisurelife.dao.music.VocalC
 	@Override
 	public List<Concert> vocalConcertListRequest() {
 		IDbUtil db =new DbUtil();
-		String sql="select * from music;";
+		String sql="select * from concert;";
 		ResultSet rs=db.query(sql);
-		
 		List<Concert> result=new ArrayList<Concert>();
 		try {
 			while(rs.next()) {
