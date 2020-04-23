@@ -17,10 +17,12 @@ public class MovieCommentSubmitServiceImpl implements com.leisurelife.service.mo
 		if (source != 0) {
 			result.put("cmd", map.get("cmd"));
 			result.put("code", 0);
+			//将数据转换为JSON格式
 			return JSON.toJSONString(result);
 		} else {
 			result.put("cmd", map.get("cmd"));
 			result.put("code", 1);
+			//将数据转换为JSON格式
 			return JSON.toJSONString(result);
 		}
 	}

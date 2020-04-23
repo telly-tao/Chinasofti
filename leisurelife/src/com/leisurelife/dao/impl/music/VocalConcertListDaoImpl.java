@@ -13,11 +13,14 @@ import com.leisurelife.util.IDbUtil;
 
 public class VocalConcertListDaoImpl implements com.leisurelife.dao.music.VocalConcertListDao {
 	private static Logger logger=Logger.getLogger(ConcertListDaoImpl.class);
+
 	@Override
 	public List<Concert> vocalConcertListRequest() {
+		//连接操作数据库工具
 		IDbUtil db =new DbUtil();
 		String sql="select * from concert;";
 		ResultSet rs=db.query(sql);
+		//用于存放数据的list
 		List<Concert> result=new ArrayList<Concert>();
 		try {
 			while(rs.next()) {
@@ -41,6 +44,7 @@ public class VocalConcertListDaoImpl implements com.leisurelife.dao.music.VocalC
 		finally {
 			db.closeQurey();
 		}
+		System.out.println("Dao result:"+result);
 		return result;
 	}
 

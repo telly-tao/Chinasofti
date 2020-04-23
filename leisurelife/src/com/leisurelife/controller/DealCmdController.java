@@ -16,6 +16,7 @@ import com.leisurelife.controller.music.ConcertDetailsController;
 import com.leisurelife.controller.music.ConcertListController;
 import com.leisurelife.controller.music.VocalConcertDetailsController;
 import com.leisurelife.controller.music.VocalConcertListController;
+
 @WebServlet("/dealcmd")
 public class DealCmdController extends HttpServlet {
 
@@ -28,37 +29,52 @@ public class DealCmdController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		if(req.getParameter("cmd").equals("0")) {
-			LoginController login=new LoginController();
+		switch (req.getParameter("cmd")) {
+		//请求列表
+		case "0"://登录
+			LoginController login = new LoginController();
 			login.doPost(req, resp);
-		}else if(req.getParameter("cmd").equals("1")) {
-			RegisterController register=new RegisterController();
+			break;
+		case "1"://注册
+			RegisterController register = new RegisterController();
 			register.doPost(req, resp);
-		}else if(req.getParameter("cmd").equals("501")) {
-			ConcertListController concertList=new ConcertListController();
+			break;
+		case "501"://音乐会列表
+			ConcertListController concertList = new ConcertListController();
 			concertList.doPost(req, resp);
-		}else if(req.getParameter("cmd").equals("502")) {
-			ConcertDetailsController concertDetails=new ConcertDetailsController();
+			break;
+		case "502"://音乐会列表
+			ConcertDetailsController concertDetails = new ConcertDetailsController();
 			concertDetails.doPost(req, resp);
-		}else if(req.getParameter("cmd").equals("201")) {
-			VocalConcertListController vocalConcertList=new VocalConcertListController();
+			break;
+		case "201"://演唱会列表
+			VocalConcertListController vocalConcertList = new VocalConcertListController();
 			vocalConcertList.doPost(req, resp);
-		}else if(req.getParameter("cmd").equals("202")) {
-			VocalConcertDetailsController vocalConcertDetails=new VocalConcertDetailsController();
+			break;
+		case "202"://演唱会详情
+			VocalConcertDetailsController vocalConcertDetails = new VocalConcertDetailsController();
 			vocalConcertDetails.doPost(req, resp);
-		}else if(req.getParameter("cmd").equals("101")) {
-			MovieListController movieList=new MovieListController();
+			break;
+		case "101"://影视列表
+			MovieListController movieList = new MovieListController();
 			movieList.doPost(req, resp);
-		}else if(req.getParameter("cmd").equals("102")) {
-			MovieDetailsController movieDetails=new MovieDetailsController();
+			break;
+		case "102"://影视细节
+			MovieDetailsController movieDetails = new MovieDetailsController();
 			movieDetails.doPost(req, resp);
-		}else if(req.getParameter("cmd").equals("103")) {
-			MovieCommentController movieComment=new MovieCommentController();
+			break;
+		case "103"://影评列表
+			MovieCommentController movieComment = new MovieCommentController();
 			movieComment.doPost(req, resp);
-		}else if(req.getParameter("cmd").equals("104")) {
-			MovieCommentSubmitController movieCommentSubmit=new MovieCommentSubmitController();
+			break;
+		case "104"://影评提交
+			MovieCommentSubmitController movieCommentSubmit = new MovieCommentSubmitController();
 			movieCommentSubmit.doPost(req, resp);
+			break;
+		default:
+			break;
 		}
+
 	}
 
 }

@@ -18,9 +18,9 @@ public class MovieCommentDaoImpl implements MovieCommentDao {
 	@Override
 	public List<Recommend> movieCommentRequest(Map<String, Object> map) {
 		IDbUtil db =new DbUtil();
-		String type=map.get("type").toString();
-		String mid=map.get("mid").toString();
-		String sql="select * from Recommend where tid='"+mid+"'and type='"+type+"';";
+		int type=Integer.parseInt( map.get("type").toString());
+		int mid=Integer.parseInt( map.get("mid").toString());
+		String sql="select * from Recommend where tid="+mid+" and type="+1+";";
 		ResultSet rs=db.query(sql);
 		List<Recommend> result=new ArrayList<Recommend>();
 		try {

@@ -36,6 +36,7 @@ public class LoginServiceImpl implements LoginService {
 		result.put("cmd",map.get("cmd"));
 		result.put("code",code);
 		System.out.println("service result:"+JSON.toJSONString(result));
+		//将数据转换为JSON格式
 		String jsonString=JSON.toJSONString(result);
 		return jsonString;
 	}

@@ -16,11 +16,16 @@ public class MovieCommentServiceImpl implements MovieCommentService {
 
 	@Override
 	public String movieCommentRequest(Map<String, Object> map) {
+		//获取影评Dao对象
 		MovieCommentDao mcd=new MovieCommentDaoImpl();
+		//创建一个list用于接收影评数据
 		List<Recommend> source = new ArrayList<Recommend>();
 		source = mcd.movieCommentRequest(map);
+		//创建一个map对象result存储需要返回前端的数据
 		Map<String, Object> result = new HashMap<String, Object>();
+		//创建一个map对象re存储内层转换为json格式
 		Map<String, Object> re = new HashMap<String, Object>();
+		//定义一个临时list存储内re转换完成后的json字符串
 		List<String> list=new ArrayList<String>();
 		
 		if (source != null) {
@@ -37,12 +42,14 @@ public class MovieCommentServiceImpl implements MovieCommentService {
 			result.put("list", list);
 			
 			ConvertToJSON json=new ConvertToJSON();
+			//将数据转换为JSON格式
 			String jsonString = json.ConvertToJSON(result.toString());
 			System.out.println("Service result:"+jsonString);
 			return jsonString;
 		} else {
 			result.put("cmd", map.get("cmd"));
 			result.put("code", 1);
+			//将数据转换为JSON格式
 			return JSON.toJSONString(result);
 		}
 	}

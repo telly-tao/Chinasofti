@@ -38,6 +38,7 @@ public class LoginController extends HttpServlet {
 		String result=login.loginRequest(request);
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
+		logger.info("request:"+result);
 		out.write(result);
 		out.flush();
 		out.close();

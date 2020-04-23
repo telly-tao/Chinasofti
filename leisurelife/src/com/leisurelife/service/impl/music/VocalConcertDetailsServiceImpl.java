@@ -24,7 +24,7 @@ public class VocalConcertDetailsServiceImpl implements VocalConcertDetailsServic
 			re.put("cmd", map.get("cmd"));
 			re.put("code", 0);
 			for (Concert so : source) {
-				if(Integer.parseInt(map.get("mid").toString())== so.getConcert_id()) {
+				if(Integer.parseInt(map.get("cid").toString())== so.getConcert_id()) {
 					re.put("call", so.getCalls());
 					re.put("mapx", so.getMapx());
 					re.put("mapy", so.getMapy());
@@ -32,12 +32,14 @@ public class VocalConcertDetailsServiceImpl implements VocalConcertDetailsServic
 					re.put("desc", so.getDescr());
 				}
 			}
+			//将数据转换为JSON格式
 			String jsonString = JSON.toJSONString(re);
-			System.out.println("Service result:"+jsonString);
+			System.out.println("vocalConcertDetails Service result:"+jsonString);
 			return jsonString;
 		} else {
 			re.put("cmd", map.get("cmd"));
 			re.put("code", 1);
+			//将数据转换为JSON格式
 			return JSON.toJSONString(re);
 		}
 	}

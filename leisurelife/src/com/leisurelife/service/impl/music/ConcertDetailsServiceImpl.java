@@ -31,12 +31,14 @@ public class ConcertDetailsServiceImpl implements ConcertDetailsService {
 					re.put("desc", so.getDescr());
 				}
 			}
+			//将数据转换为JSON格式
 			String jsonString = JSON.toJSONString(re);
 			System.out.println("Service result:"+jsonString);
 			return jsonString;
 		} else {
 			re.put("cmd", map.get("cmd"));
 			re.put("code", 1);
+			//将数据转换为JSON格式
 			return JSON.toJSONString(re);
 		}
 	}

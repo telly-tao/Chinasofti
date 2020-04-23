@@ -10,13 +10,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
+import com.leisurelife.controller.LoginController;
 import com.leisurelife.service.impl.music.VocalConcertDetailsServiceImpl;
 import com.leisurelife.service.music.VocalConcertDetailsService;
 //@WebServlet("mvcd")
 public class VocalConcertDetailsController extends HttpServlet {
 
 	private static final long serialVersionUID = -2873156464928580876L;
-
+	private static Logger logger=Logger.getLogger(LoginController.class);
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doPost(req, resp);
