@@ -10,7 +10,7 @@ import com.leisurelife.dao.impl.movie.MovieListDaoImpl;
 import com.leisurelife.dao.movie.MovieListDao;
 import com.leisurelife.model.Movie;
 import com.leisurelife.service.movie.MovieListService;
-import com.leisurelife.util.ConvertToJSON;
+import com.leisurelife.util.ConvertToJson;
 
 public class MovieListServiceImpl implements MovieListService {
 
@@ -39,7 +39,7 @@ public class MovieListServiceImpl implements MovieListService {
 			}
 			result.put("list", list);
 			//将数据转换为JSON格式
-			ConvertToJSON json = new ConvertToJSON();
+			ConvertToJson json = new ConvertToJson();
 			String jsonString = json.ConvertToJSON(result.toString());
 			System.out.println("Service result:" + jsonString);
 			return jsonString;

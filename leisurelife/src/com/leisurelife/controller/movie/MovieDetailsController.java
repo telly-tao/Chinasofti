@@ -12,14 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-import com.leisurelife.controller.LoginController;
 import com.leisurelife.service.impl.movie.MovieDetailsServiceImpl;
 import com.leisurelife.service.movie.MovieDetailsService;
 //@WebServlet("mmd")
 public class MovieDetailsController extends HttpServlet {
 
 	private static final long serialVersionUID = 5828548786637575733L;
-	private static Logger logger=Logger.getLogger(LoginController.class);
+	private static Logger logger=Logger.getLogger(MovieDetailsController.class);
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doPost(req, resp);

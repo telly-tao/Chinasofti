@@ -10,6 +10,7 @@ import com.leisurelife.util.DbUtil;
 import com.leisurelife.util.IDbUtil;
 
 public class MovieCommentSubmitDaoImpl implements MovieCommentSubmitDao {
+	
 	@Override
 	public int movieCommentSubmitRequest(Map<String, Object> map) {
 		

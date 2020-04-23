@@ -12,12 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-import com.leisurelife.controller.LoginController;
 import com.leisurelife.service.impl.music.ConcertDetailsServiceImpl;
 import com.leisurelife.service.music.ConcertDetailsService;
-//@WebServlet("mcd")
 public class ConcertDetailsController extends HttpServlet {
-	private static Logger logger=Logger.getLogger(LoginController.class);
+	private static Logger logger=Logger.getLogger(ConcertDetailsController.class);
 	
 	private static final long serialVersionUID = -2435752707430865569L;
 	@Override
@@ -32,11 +30,13 @@ public class ConcertDetailsController extends HttpServlet {
 		Map<String,Object> request =new HashMap<String,Object>();
 		request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
 		request.put("mid", req.getParameter("mid"));
-		System.out.println("request:"+request);
+		System.out.println("ConcertDetailsController request:"+request);
+		logger.info("ConcertDetailsController request:"+request);
 		//获取处理结果
 		ConcertDetailsService cds=new ConcertDetailsServiceImpl();
 		String result=cds.concertDetailsRequest(request);
-		System.out.println(result);
+		System.out.println("ConcertDetailsController request:"+result);
+		logger.info("ConcertDetailsController request:"+result);
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
 		out.write(result);

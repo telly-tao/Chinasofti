@@ -16,11 +16,11 @@ public class ConcertListDaoImpl implements ConcertListDao {
 	private static Logger logger=Logger.getLogger(ConcertListDaoImpl.class);
 	@Override
 	public List<Music> concertListRequest() {
-		
+		//提取传过来的数据执行对数据库操作返回结果集
 		IDbUtil db =new DbUtil();
 		String sql="select * from music;";
 		ResultSet rs=db.query(sql);
-		
+		//将从数据库获取的数据集存取模型对象列表中
 		List<Music> result=new ArrayList<Music>();
 		try {
 			while(rs.next()) {

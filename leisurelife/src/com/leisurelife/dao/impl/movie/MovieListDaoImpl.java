@@ -16,9 +16,10 @@ public class MovieListDaoImpl implements com.leisurelife.dao.movie.MovieListDao 
 	@Override
 	public List<Movie> movieListRequest() {
 		IDbUtil db =new DbUtil();
+		//提取传过来的数据执行对数据库操作返回结果集
 		String sql="select * from movie;";
 		ResultSet rs=db.query(sql);
-		
+		//将从数据库获取的数据集存取模型对象列表中
 		List<Movie> result=new ArrayList<Movie>();
 		try {
 			while(rs.next()) {

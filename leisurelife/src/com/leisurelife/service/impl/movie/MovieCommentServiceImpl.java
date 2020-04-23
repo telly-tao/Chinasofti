@@ -10,7 +10,7 @@ import com.leisurelife.dao.impl.movie.MovieCommentDaoImpl;
 import com.leisurelife.dao.movie.MovieCommentDao;
 import com.leisurelife.model.Recommend;
 import com.leisurelife.service.movie.MovieCommentService;
-import com.leisurelife.util.ConvertToJSON;
+import com.leisurelife.util.ConvertToJson;
 
 public class MovieCommentServiceImpl implements MovieCommentService {
 
@@ -41,10 +41,9 @@ public class MovieCommentServiceImpl implements MovieCommentService {
 			}
 			result.put("list", list);
 			
-			ConvertToJSON json=new ConvertToJSON();
+			ConvertToJson json=new ConvertToJson();
 			//将数据转换为JSON格式
 			String jsonString = json.ConvertToJSON(result.toString());
-			//String jsonString = ConvertToJSON(result.toString());
 			System.out.println("Service result:"+jsonString);
 			return jsonString;
 		} else {
@@ -54,10 +53,6 @@ public class MovieCommentServiceImpl implements MovieCommentService {
 			return JSON.toJSONString(result);
 		}
 	}
-	public String ConvertToJSON(String result){
-		String[] a=result.split("\\[");
-		String jsonResult=a[0].replace(", ", "\",\"").replace("=", "\":\"").replace("{", "{\"").concat("[").replace("\"[", "").concat(a[1]).replace("]", "");
-		return jsonResult;
-	}
+
 
 }

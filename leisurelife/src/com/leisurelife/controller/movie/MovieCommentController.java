@@ -11,21 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
-
-import com.alibaba.fastjson.JSON;
-import com.leisurelife.controller.LoginController;
 import com.leisurelife.service.impl.movie.MovieCommentServiceImpl;
 import com.leisurelife.service.movie.MovieCommentService;
 
 public class MovieCommentController extends HttpServlet {
 
 	private static final long serialVersionUID = -816389183445419587L;
-	private static Logger logger=Logger.getLogger(LoginController.class);
+	private static Logger logger=Logger.getLogger(MovieCommentController.class);
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doPost(req, resp);
 	}
-
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("MovieCommlist start");

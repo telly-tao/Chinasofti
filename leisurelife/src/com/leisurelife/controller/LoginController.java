@@ -31,14 +31,15 @@ public class LoginController extends HttpServlet {
 		request.put("cmd", req.getParameter("cmd"));
 		request.put("username", req.getParameter("username"));
 		request.put("password", req.getParameter("password"));
-		System.out.println("request1111:"+request);
-		logger.info("request:"+request);
+		System.out.println("LoginController request:"+request);
+		logger.info("LoginController request:"+request);
 		//获取处理结果
 		LoginService login=new LoginServiceImpl();
 		String result=login.loginRequest(request);
+		System.out.println("LoginController result:"+request);
+		logger.info("LoginController result:"+result);
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
-		logger.info("request:"+result);
 		out.write(result);
 		out.flush();
 		out.close();

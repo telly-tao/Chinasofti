@@ -18,8 +18,6 @@ public class DbUtil implements IDbUtil {
 	private Connection con = null;
 	private Statement stm = null;
 	private PreparedStatement pstm=null;
-	public void DbUtil(){
-	}
 	/**
 	 * 加载驱动，创建连接对象
 	 * @return

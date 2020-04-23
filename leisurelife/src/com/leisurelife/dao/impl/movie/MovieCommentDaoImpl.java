@@ -18,10 +18,13 @@ public class MovieCommentDaoImpl implements MovieCommentDao {
 	@Override
 	public List<Recommend> movieCommentRequest(Map<String, Object> map) {
 		IDbUtil db =new DbUtil();
+		//提取传过来的数据执行对数据库操作返回结果集
 		int type=Integer.parseInt( map.get("type").toString());
+		type=1;
 		int mid=Integer.parseInt( map.get("mid").toString());
-		String sql="select * from Recommend where tid="+mid+" and type="+1+";";
+		String sql="select * from Recommend where tid="+mid+" and type="+type+";";
 		ResultSet rs=db.query(sql);
+		
 		List<Recommend> result=new ArrayList<Recommend>();
 		try {
 			while(rs.next()) {

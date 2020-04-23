@@ -10,7 +10,7 @@ import com.leisurelife.dao.impl.music.VocalConcertListDaoImpl;
 import com.leisurelife.dao.music.VocalConcertListDao;
 import com.leisurelife.model.Concert;
 import com.leisurelife.service.music.VocalConcertListService;
-import com.leisurelife.util.ConvertToJSON;
+import com.leisurelife.util.ConvertToJson;
 
 public class VocalConcertListServiceImpl implements VocalConcertListService {
 
@@ -40,7 +40,7 @@ public class VocalConcertListServiceImpl implements VocalConcertListService {
 				}
 				result.put("list", list);
 				//将数据转换为JSON格式
-				ConvertToJSON json=new ConvertToJSON();
+				ConvertToJson json=new ConvertToJson();
 				String jsonString = json.ConvertToJSON(result.toString());
 				System.out.println("Service result:"+jsonString);
 				return jsonString;
