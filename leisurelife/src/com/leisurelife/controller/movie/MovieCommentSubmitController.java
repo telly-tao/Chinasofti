@@ -31,9 +31,9 @@ public class MovieCommentSubmitController extends HttpServlet {
 		
 		//获取请求数据
 		Map<String,Object> request =new HashMap<String,Object>();
-		request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
+		request.put("cmd", req.getParameter("cmd"));
 		request.put("mid", req.getParameter("mid"));
-		request.put("type", Integer.parseInt(req.getParameter("tyep")));
+		request.put("type", 1);
 		request.put("content", req.getParameter("content"));
 		request.put("username", req.getParameter("username"));
 		System.out.println("MovieCommSub request p:" +request);
@@ -45,7 +45,7 @@ public class MovieCommentSubmitController extends HttpServlet {
 		logger.info("MovieCommSub result :" +result);
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
-		out.write(JSON.toJSONString(result));
+		out.write(result);
 		out.flush();
 		out.close();
 	}

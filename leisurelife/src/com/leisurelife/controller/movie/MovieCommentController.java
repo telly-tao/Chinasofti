@@ -28,12 +28,12 @@ public class MovieCommentController extends HttpServlet {
 
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		System.out.println("MovieCommlist start");
 		//获取请求数据
 		Map<String,Object> request =new HashMap<String,Object>();
-		request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
+		request.put("cmd", req.getParameter("cmd"));
 		request.put("mid", req.getParameter("mid"));
-		request.put("type", Integer.parseInt(req.getParameter("tyep")));
+		request.put("type", 1);
 		System.out.println("MovieCommlist request p:" +request);
 		logger.info("MovieCommlist request p:" +request);
 		//获取处理结果
@@ -43,7 +43,7 @@ public class MovieCommentController extends HttpServlet {
 		logger.info("MovieCommlist result :" +result);
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
-		out.write(JSON.toJSONString(result));
+		out.write(result);
 		out.flush();
 		out.close();
 	}

@@ -14,7 +14,7 @@ public class MovieCommentSubmitServiceImpl implements com.leisurelife.service.mo
 		MovieCommentSubmitDao mcsd=new MovieCommentSubmitDaoImpl();
 		int source = mcsd.movieCommentSubmitRequest(map);
 		Map<String, Object> result = new HashMap<String, Object>();
-		if (source != 0) {
+		if (source == 1) {
 			result.put("cmd", map.get("cmd"));
 			result.put("code", 0);
 			//将数据转换为JSON格式

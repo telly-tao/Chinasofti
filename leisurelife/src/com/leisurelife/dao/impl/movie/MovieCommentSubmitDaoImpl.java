@@ -23,9 +23,10 @@ public class MovieCommentSubmitDaoImpl implements MovieCommentSubmitDao {
 		String content=map.get("content").toString();
 		String username=map.get("username").toString();
 		//sqlÓï¾ä
-		String sql="insert into Recommend(username,time,content,type,tid) values (username='"+username+"',"
-				+ "time="+date+",content='"+content+"',type="+type+",tid="+mid+");";
+		String sql="insert into Recommend(username,time,content,type,tid) values ('"+username+"',"
+				+ "'"+date+"','"+content+"',"+type+","+mid+");";
 		int result=db.update(sql);
+		System.out.println("sql:"+sql+"Ö´ÐÐ½á¹û:"+result);
 		return result;
 	}
 
