@@ -29,7 +29,7 @@ public class VocalConcertListController extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		//获取请求数据
 		Map<String,Object> request =new HashMap<String,Object>();
@@ -37,12 +37,11 @@ public class VocalConcertListController extends HttpServlet {
 		
 		//获取处理结果
 		VocalConcertListService vcls=new VocalConcertListServiceImpl();
-		List<Object> result=new ArrayList<Object>();
-		result=vcls.vocalConcertListRequest(request);
+		String result=vcls.vocalConcertListRequest(request);
 		
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
-		out.write(JSON.toJSONString(result));
+		out.write(result);
 		out.flush();
 		out.close();
 	}
