@@ -43,17 +43,6 @@ public class DealCmdController extends HttpServlet {
 		}else if(req.getParameter("cmd").equals("201")) {
 			VocalConcertListController vocalConcertList=new VocalConcertListController();
 			vocalConcertList.doPost(req, resp);
-
-		}
-		else if(req.getParameter("cmd").equals("202")) {
-			VocalConcertDetailsController concertDetails=new VocalConcertDetailsController();
-			concertDetails.doPost(req, resp);
-		}else if(req.getParameter("cmd").equals("101")) {
-			MovieListController movieList=new MovieListController();
-			movieList.doPost(req, resp);
-		}
-		else if(req.getParameter("cmd").equals("102")) {
-
 		}else if(req.getParameter("cmd").equals("202")) {
 			VocalConcertDetailsController vocalConcertDetails=new VocalConcertDetailsController();
 			vocalConcertDetails.doPost(req, resp);
@@ -61,14 +50,12 @@ public class DealCmdController extends HttpServlet {
 			MovieListController movieList=new MovieListController();
 			movieList.doPost(req, resp);
 		}else if(req.getParameter("cmd").equals("102")) {
-
 			MovieDetailsController movieDetails=new MovieDetailsController();
 			movieDetails.doPost(req, resp);
 		}else if(req.getParameter("cmd").equals("103")) {
 			MovieCommentController movieComment=new MovieCommentController();
 			movieComment.doPost(req, resp);
-		}
-		else if(req.getParameter("cmd").equals("104")) {
+		}else if(req.getParameter("cmd").equals("104")) {
 			MovieCommentSubmitController movieCommentSubmit=new MovieCommentSubmitController();
 			movieCommentSubmit.doPost(req, resp);
 		}

@@ -37,12 +37,11 @@ public class MovieListController extends HttpServlet {
 		
 		//获取处理结果
 		MovieListService mls=new MovieListServiceImpl();
-		List<Object> result=new ArrayList<Object>();
-		result=mls.movieListRequest(request);
+		String result=mls.movieListRequest(request);
 		
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
-		out.write(JSON.toJSONString(result));
+		out.write(result);
 		out.flush();
 		out.close();
 	}

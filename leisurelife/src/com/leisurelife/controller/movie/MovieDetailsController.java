@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.alibaba.fastjson.JSON;
 import com.leisurelife.service.LoginService;
 import com.leisurelife.service.impl.LoginServiceImpl;
-import com.leisurelife.service.impl.movie.MoviceDetialsServiceImpl;
-import com.leisurelife.service.movie.MoviceDetialsService;
+import com.leisurelife.service.impl.movie.MovieDetailsServiceImpl;
+import com.leisurelife.service.movie.MovieDetailsService;
 //@WebServlet("mmd")
 public class MovieDetailsController extends HttpServlet {
 
@@ -37,13 +37,12 @@ public class MovieDetailsController extends HttpServlet {
 		request.put("mid", req.getParameter("mid"));
 		
 		//获取处理结果
-		MoviceDetialsService mds=new MoviceDetialsServiceImpl();
-		List<Object> result=new ArrayList<Object>();
-		result=mds.moviceDetialsRequest(request);
+		MovieDetailsService mds=new MovieDetailsServiceImpl();
+		String result=mds.moviceDetialsRequest(request);
 		
 		//提交处理结果
 		PrintWriter out =resp.getWriter();
-		out.write(JSON.toJSONString(result));
+		out.write(result);
 		out.flush();
 		out.close();
 	}

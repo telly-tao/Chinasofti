@@ -4,5 +4,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface MovieCommentSubmitDao {
-	public List<Object> movieCommentSubmitRequest(Map<String,Object> map);
+	public int movieCommentSubmitRequest(Map<String,Object> map);
 }

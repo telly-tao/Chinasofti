@@ -4,5 +4,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface MovieListService {
-	public List<Object> movieListRequest(Map<String,Object> map);
+	public String movieListRequest(Map<String,Object> map);
 }

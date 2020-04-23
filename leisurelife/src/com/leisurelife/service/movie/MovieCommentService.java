@@ -4,5 +4,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface MovieCommentService {
-	public List<Object> movieCommentRequest(Map<String,Object> map);
+	public String movieCommentRequest(Map<String,Object> map);
 }
