@@ -2,23 +2,18 @@ package com.leisurelife.controller.movie;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.alibaba.fastjson.JSON;
-import com.leisurelife.service.LoginService;
-import com.leisurelife.service.impl.LoginServiceImpl;
 import com.leisurelife.service.impl.movie.MovieCommentSubmitServiceImpl;
 import com.leisurelife.service.movie.MovieCommentSubmitService;
-//@WebServlet("mmcsc")
+
 public class MovieCommentSubmitController extends HttpServlet {
 
 	private static final long serialVersionUID = 6246155383014622248L;

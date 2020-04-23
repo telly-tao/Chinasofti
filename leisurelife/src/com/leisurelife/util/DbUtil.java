@@ -9,8 +9,6 @@ import java.sql.Statement;
 
 import org.apache.log4j.Logger;
 
-import com.leisurelife.service.impl.LoginServiceImpl;
-
 public class DbUtil implements IDbUtil {
 	private static final String URL = "jdbc:mysql://127.0.0.1:3306/life?useUnicode=true&characterEncoding=UTF8";
 	private static final String USER = "root";

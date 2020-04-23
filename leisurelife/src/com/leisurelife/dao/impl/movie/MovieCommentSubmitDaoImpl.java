@@ -1,27 +1,18 @@
 package com.leisurelife.dao.impl.movie;
 
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-
-import com.leisurelife.dao.movie.MovieCommentDao;
 import com.leisurelife.dao.movie.MovieCommentSubmitDao;
-import com.leisurelife.model.Recommend;
 import com.leisurelife.util.DbUtil;
 import com.leisurelife.util.IDbUtil;
 
 public class MovieCommentSubmitDaoImpl implements MovieCommentSubmitDao {
-	private static Logger logger=Logger.getLogger(MovieListDaoImpl.class);
 	@Override
 	public int movieCommentSubmitRequest(Map<String, Object> map) {
-		MovieCommentDaoImpl movieCommentDao;
+		
 		IDbUtil db =new DbUtil();
 		Date d=new Date();
 		SimpleDateFormat ft=new SimpleDateFormat("yyyy-MM-dd");

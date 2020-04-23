@@ -6,11 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSON;
-import com.leisurelife.dao.LoginDao;
-import com.leisurelife.dao.impl.LoginDaoImpl;
-import com.leisurelife.dao.impl.music.ConcertDetailsDaoImpl;
 import com.leisurelife.dao.impl.music.ConcertListDaoImpl;
-import com.leisurelife.dao.music.ConcertDetailsDao;
 import com.leisurelife.dao.music.ConcertListDao;
 import com.leisurelife.model.Music;
 import com.leisurelife.service.music.ConcertDetailsService;

@@ -3,11 +3,9 @@ package com.leisurelife.controller.delicious;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-//@WebServlet("ddl")
 public class DeliciousListController extends HttpServlet {
 
 	private static final long serialVersionUID = 3127481716348368480L;

@@ -8,7 +8,6 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.leisurelife.controller.LoginController;
 import com.leisurelife.dao.LoginDao;
 import com.leisurelife.model.User;
 import com.leisurelife.util.DbUtil;

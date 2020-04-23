@@ -4,11 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.leisurelife.dao.impl.LoginDaoImpl;
 import com.leisurelife.dao.music.ConcertListDao;
 import com.leisurelife.model.Music;
 import com.leisurelife.util.DbUtil;

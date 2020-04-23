@@ -6,11 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSON;
-import com.leisurelife.dao.LoginDao;
-import com.leisurelife.dao.impl.LoginDaoImpl;
 import com.leisurelife.dao.impl.movie.MovieCommentDaoImpl;
 import com.leisurelife.dao.movie.MovieCommentDao;
-import com.leisurelife.model.Movie;
 import com.leisurelife.model.Recommend;
 import com.leisurelife.service.movie.MovieCommentService;
 import com.leisurelife.util.ConvertToJSON;

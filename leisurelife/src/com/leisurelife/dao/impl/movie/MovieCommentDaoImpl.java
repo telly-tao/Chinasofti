@@ -9,7 +9,6 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 import com.leisurelife.dao.movie.MovieCommentDao;
-import com.leisurelife.model.Movie;
 import com.leisurelife.model.Recommend;
 import com.leisurelife.util.DbUtil;
 import com.leisurelife.util.IDbUtil;
