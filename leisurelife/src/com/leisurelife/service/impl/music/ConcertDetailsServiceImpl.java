@@ -5,16 +5,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.fastjson.JSON;
+import com.google.gson.Gson;
 import com.leisurelife.dao.impl.music.ConcertListDaoImpl;
 import com.leisurelife.dao.music.ConcertListDao;
 import com.leisurelife.model.Music;
 import com.leisurelife.service.music.ConcertDetailsService;
 
 public class ConcertDetailsServiceImpl implements ConcertDetailsService {
-
 	@Override
 	public String concertDetailsRequest(Map<String, Object> map) {
+		Gson gson =new Gson();
 		ConcertListDao cld = new ConcertListDaoImpl();
 		List<Music> source = new ArrayList<Music>();
 		source = cld.concertListRequest();
@@ -32,14 +32,14 @@ public class ConcertDetailsServiceImpl implements ConcertDetailsService {
 				}
 			}
 			//将数据转换为JSON格式
-			String jsonString = JSON.toJSONString(re);
+			String jsonString = gson.toJson(re);
 			System.out.println("Service result:"+jsonString);
 			return jsonString;
 		} else {
 			re.put("cmd", map.get("cmd"));
 			re.put("code", 1);
 			//将数据转换为JSON格式
-			return JSON.toJSONString(re);
+			return gson.toJson(re);
 		}
 	}
 

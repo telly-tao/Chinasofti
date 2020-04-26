@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.alibaba.fastjson.JSON;
+import com.google.gson.Gson;
 import com.leisurelife.dao.impl.movie.MovieListDaoImpl;
 import com.leisurelife.dao.movie.MovieListDao;
 import com.leisurelife.model.Movie;
@@ -15,6 +15,7 @@ public class MovieDetailsServiceImpl implements MovieDetailsService {
 
 	@Override
 	public String moviceDetialsRequest(Map<String, Object> map) {
+		Gson gson=new Gson();
 		MovieListDao mdd=new MovieListDaoImpl();
 		List<Movie> source = new ArrayList<Movie>();
 		source = mdd.movieListRequest();
@@ -29,14 +30,14 @@ public class MovieDetailsServiceImpl implements MovieDetailsService {
 				}
 			}
 			//将数据转换为JSON格式
-			String jsonString = JSON.toJSONString(re);
+			String jsonString = gson.toJson(re);
 			System.out.println("Service result:"+jsonString);
 			return jsonString;
 		} else {
 			re.put("cmd", map.get("cmd"));
 			re.put("code", 1);
 			//将数据转换为JSON格式
-			return JSON.toJSONString(re);
+			return  gson.toJson(re);
 		}
 	}
 

@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.alibaba.fastjson.JSON;
+import com.google.gson.Gson;
 import com.leisurelife.dao.LoginDao;
 import com.leisurelife.dao.impl.LoginDaoImpl;
 import com.leisurelife.model.User;
@@ -17,7 +17,7 @@ public class LoginServiceImpl implements LoginService {
 	private static Logger logger=Logger.getLogger(LoginServiceImpl.class);
 	@Override
 	public String loginRequest(Map<String,Object> map) {
-		
+		Gson gson=new Gson();
 		LoginDao login=new LoginDaoImpl();
 		List<User> source =new ArrayList<User>();
 		//获取结果
@@ -35,9 +35,9 @@ public class LoginServiceImpl implements LoginService {
 		}
 		result.put("cmd",map.get("cmd"));
 		result.put("code",code);
-		System.out.println("service result:"+JSON.toJSONString(result));
+		System.out.println("service result:"+gson.toJson(result));
 		//将数据转换为JSON格式
-		String jsonString=JSON.toJSONString(result);
+		String jsonString=gson.toJson(result);
 		return jsonString;
 	}
 
