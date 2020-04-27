@@ -27,8 +27,8 @@ public class ConcertListServiceImpl implements ConcertListService {
 		List<Object> list = new ArrayList<Object>();
 
 		if (source != null) {
-			result.put("cmd", map.get("cmd"));
-			result.put("code", 0);
+			result.put("cmd", map.get("cmd").toString());
+			result.put("code", "0");
 			for (Music so : source) {
 				re = new HashMap<String, Object>();
 				re.put("mid", so.getMusicid());

@@ -28,8 +28,8 @@ public class MovieCommentServiceImpl implements MovieCommentService {
 		List<Object> list=new ArrayList<Object>();
 		Gson gson=new Gson();
 		if (source != null) {
-			result.put("cmd", map.get("cmd"));
-			result.put("code", 0);
+			result.put("cmd", map.get("cmd").toString());
+			result.put("code", "0");
 			for (Recommend so : source) {
 				re = new HashMap<String, Object>();
 				re.put("tid", so.getTid());

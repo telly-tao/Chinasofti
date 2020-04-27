@@ -22,7 +22,6 @@ public class LoginServiceImpl implements LoginService {
 		List<User> source =new ArrayList<User>();
 		//获取结果
 		source = login.loginRequest(map);
-		System.out.println(source.get(0));
 		System.out.println(source.get(0).toString());
 		logger.info(source.get(0));
 		Map<String,Object> result =new HashMap<String,Object>();

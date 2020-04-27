@@ -26,8 +26,8 @@ public class MovieListServiceImpl implements MovieListService {
 		// 定义一个临时list存储内re转换完成后的json字符串
 		List<Object> list = new ArrayList<Object>();
 		if (source != null) {
-			result.put("cmd", map.get("cmd"));
-			result.put("code", 0);
+			result.put("cmd", map.get("cmd").toString());
+			result.put("code", "0");
 			for (Movie so : source) {
 				re = new HashMap<String, Object>();
 				re.put("mid", so.getMovieid());
