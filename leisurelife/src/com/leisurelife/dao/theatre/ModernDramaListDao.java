@@ -3,6 +3,8 @@ package com.leisurelife.dao.theatre;
 import java.util.List;
 import java.util.Map;
 
+import com.leisurelife.model.Play;
+
 public interface ModernDramaListDao {
-	public List<Object> modernDramaListRequest(Map<String,Object> map);
+	public List<Play> modernDramaListRequest();
 }

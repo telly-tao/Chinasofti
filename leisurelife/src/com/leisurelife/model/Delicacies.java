@@ -3,7 +3,7 @@ package com.leisurelife.model;
 import java.util.Date;
 
 public class Delicacies {
-	private int delicacies;
+	private int delicacies_id;
 	private String label;
 	private String address;
 	private int avgs;
@@ -12,11 +12,11 @@ public class Delicacies {
 	private String mapx;
 	private String mapy;
 	private Date name;
-	public int getDelicacies() {
-		return delicacies;
+	public int getDelicacies_id() {
+		return delicacies_id;
 	}
-	public void setDelicacies(int delicacies) {
-		this.delicacies = delicacies;
+	public void setDelicacies(int delicacies_id) {
+		this.delicacies_id = delicacies_id;
 	}
 	public String getLabel() {
 		return label;
@@ -68,7 +68,7 @@ public class Delicacies {
 	}
 	@Override
 	public String toString() {
-		return "Delicacies [delicacies=" + delicacies + ", label=" + label + ", address=" + address + ", avgs=" + avgs
+		return "Delicacies [delicacies=" + delicacies_id + ", label=" + label + ", address=" + address + ", avgs=" + avgs
 				+ ", image=" + image + ", calls=" + calls + ", mapx=" + mapx + ", mapy=" + mapy + ", name=" + name
 				+ "]";
 	}

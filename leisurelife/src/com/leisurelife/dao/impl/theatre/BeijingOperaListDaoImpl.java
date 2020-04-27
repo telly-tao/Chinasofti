@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 import com.leisurelife.dao.theatre.BeijingOperaListDao;
+import com.leisurelife.model.Pekingopera;
 
 public class BeijingOperaListDaoImpl implements BeijingOperaListDao {
 
 	@Override
-	public List<Object> beijingOperaListRequest(Map<String, Object> map) {
+	public List<Pekingopera> beijingOperaListRequest() {
 		// TODO Auto-generated method stub
 		return null;
 	}

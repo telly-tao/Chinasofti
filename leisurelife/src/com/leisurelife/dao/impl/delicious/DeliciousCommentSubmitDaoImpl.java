@@ -8,9 +8,9 @@ import com.leisurelife.dao.delicious.DeliciousCommentSubmitDao;
 public class DeliciousCommentSubmitDaoImpl implements DeliciousCommentSubmitDao {
 
 	@Override
-	public List<Object> deliciousCommentSubmitRequest(Map<String, Object> map) {
+	public int deliciousCommentSubmitRequest(Map<String, Object> map) {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 }
