@@ -1,5 +1,7 @@
 package com.leisurelife.service;
 
-public interface CommentService {
+import java.util.Map;
 
+public interface CommentService {
+	public String commentRequest(Map<String,Object> map);
 }

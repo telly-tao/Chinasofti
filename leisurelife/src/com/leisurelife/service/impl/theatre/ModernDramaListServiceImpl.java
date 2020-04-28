@@ -6,11 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
-import com.leisurelife.dao.impl.music.VocalConcertListDaoImpl;
 import com.leisurelife.dao.impl.theatre.ModernDramaListDaoImpl;
-import com.leisurelife.dao.music.VocalConcertListDao;
 import com.leisurelife.dao.theatre.ModernDramaListDao;
-import com.leisurelife.model.Concert;
 import com.leisurelife.model.Play;
 import com.leisurelife.service.theatre.ModernDramaListService;
 

@@ -1,4 +1,4 @@
-package com.leisurelife.service.impl.movie;
+package com.leisurelife.service.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,20 +6,19 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
-import com.leisurelife.dao.impl.movie.MovieCommentDaoImpl;
-import com.leisurelife.dao.movie.MovieCommentDao;
+import com.leisurelife.dao.CommentDao;
+import com.leisurelife.dao.impl.CommentDaoImpl;
 import com.leisurelife.model.Recommend;
-import com.leisurelife.service.movie.MovieCommentService;
+import com.leisurelife.service.CommentService;
 
-public class MovieCommentServiceImpl implements MovieCommentService {
-
+public class CommentServiceImpl implements CommentService {
 	@Override
-	public String movieCommentRequest(Map<String, Object> map) {
-		//获取影评Dao对象
-		MovieCommentDao mcd=new MovieCommentDaoImpl();
-		//创建一个list用于接收影评数据
+	public String commentRequest(Map<String, Object> map) {
+		CommentDao cd=new CommentDaoImpl();
+		//创建一个list用于接收数据
 		List<Recommend> source = new ArrayList<Recommend>();
-		source = mcd.movieCommentRequest(map);
+		
+		source = cd.commentRequest(map);
 		//创建一个map对象result存储需要返回前端的数据
 		Map<String, Object> result = new HashMap<String, Object>();
 		//创建一个map对象re存储内层转换为json格式
@@ -51,6 +50,5 @@ public class MovieCommentServiceImpl implements MovieCommentService {
 			return gson.toJson(result);
 		}
 	}
-
 
 }

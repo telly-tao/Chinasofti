@@ -6,11 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
-import com.leisurelife.dao.impl.music.ConcertListDaoImpl;
 import com.leisurelife.dao.impl.theatre.BeijingOperaListDaoImpl;
-import com.leisurelife.dao.music.ConcertListDao;
 import com.leisurelife.dao.theatre.BeijingOperaListDao;
-import com.leisurelife.model.Music;
 import com.leisurelife.model.Pekingopera;
 import com.leisurelife.service.theatre.BeijingOperaDetialsService;
 

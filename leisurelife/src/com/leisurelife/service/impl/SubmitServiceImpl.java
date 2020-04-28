@@ -1,18 +1,20 @@
-package com.leisurelife.service.impl.movie;
+package com.leisurelife.service.impl;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import com.google.gson.Gson;
-import com.leisurelife.dao.impl.movie.MovieCommentSubmitDaoImpl;
-import com.leisurelife.dao.movie.MovieCommentSubmitDao;
+import com.leisurelife.dao.SubmitDao;
+import com.leisurelife.dao.impl.SubmitDaoImpl;
+import com.leisurelife.service.SubmitService;
 
-public class MovieCommentSubmitServiceImpl implements com.leisurelife.service.movie.MovieCommentSubmitService {
+public class SubmitServiceImpl implements SubmitService {
+
 	@Override
-	public String movieCommentSubmitRequest(Map<String, Object> map) {
-		MovieCommentSubmitDao mcsd=new MovieCommentSubmitDaoImpl();
+	public String submitRequest(Map<String, Object> map) {
+		SubmitDao sd=new SubmitDaoImpl();
 		Gson gson=new Gson();
-		int source = mcsd.movieCommentSubmitRequest(map);
+		int source = sd.submitRequest(map);
 		Map<String, Object> result = new HashMap<String, Object>();
 		if (source == 1) {
 			result.put("cmd", map.get("cmd"));

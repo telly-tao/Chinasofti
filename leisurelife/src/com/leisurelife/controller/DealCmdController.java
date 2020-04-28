@@ -13,36 +13,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-//import com.leisurelife.controller.delicious.DeliciousCommentController;
-//import com.leisurelife.controller.delicious.DeliciousCommentSubmitComtroller;
-//import com.leisurelife.controller.delicious.DeliciousDetialsController;
-//import com.leisurelife.controller.delicious.DeliciousListController;
-//import com.leisurelife.controller.movie.MovieCommentController;
-//import com.leisurelife.controller.movie.MovieCommentSubmitController;
-//import com.leisurelife.controller.movie.MovieDetailsController;
-//import com.leisurelife.controller.movie.MovieListController;
-//import com.leisurelife.controller.music.ConcertDetailsController;
-//import com.leisurelife.controller.music.ConcertListController;
-//import com.leisurelife.controller.music.VocalConcertDetailsController;
-//import com.leisurelife.controller.music.VocalConcertListController;
-//import com.leisurelife.controller.theatre.BeijingOperaDetialsController;
-//import com.leisurelife.controller.theatre.BeijingOperaListController;
-//import com.leisurelife.controller.theatre.ModernDramaDetialsController;
-//import com.leisurelife.controller.theatre.ModernDramaListController;
+import com.leisurelife.service.CommentService;
 import com.leisurelife.service.LoginService;
 import com.leisurelife.service.RegisterService;
-import com.leisurelife.service.delicious.DeliciousCommentService;
-import com.leisurelife.service.delicious.DeliciousCommentSubmitService;
+import com.leisurelife.service.SubmitService;
 import com.leisurelife.service.delicious.DeliciousDetialsService;
 import com.leisurelife.service.delicious.DeliciousListService;
+import com.leisurelife.service.impl.CommentServiceImpl;
 import com.leisurelife.service.impl.LoginServiceImpl;
 import com.leisurelife.service.impl.RegisterServiceImpl;
-import com.leisurelife.service.impl.delicious.DeliciousCommentServiceImpl;
-import com.leisurelife.service.impl.delicious.DeliciousCommentSubmitServiceImpl;
+import com.leisurelife.service.impl.SubmitServiceImpl;
 import com.leisurelife.service.impl.delicious.DeliciousDetialsServiceImpl;
 import com.leisurelife.service.impl.delicious.DeliciousListServiceImpl;
-import com.leisurelife.service.impl.movie.MovieCommentServiceImpl;
-import com.leisurelife.service.impl.movie.MovieCommentSubmitServiceImpl;
 import com.leisurelife.service.impl.movie.MovieDetailsServiceImpl;
 import com.leisurelife.service.impl.movie.MovieListServiceImpl;
 import com.leisurelife.service.impl.music.ConcertDetailsServiceImpl;
@@ -53,8 +35,6 @@ import com.leisurelife.service.impl.theatre.BeijingOperaDetialsServiceImpl;
 import com.leisurelife.service.impl.theatre.BeijingOperaListServiceImpl;
 import com.leisurelife.service.impl.theatre.ModernDramaDetialsServiceImpl;
 import com.leisurelife.service.impl.theatre.ModernDramaListServiceImpl;
-import com.leisurelife.service.movie.MovieCommentService;
-import com.leisurelife.service.movie.MovieCommentSubmitService;
 import com.leisurelife.service.movie.MovieDetailsService;
 import com.leisurelife.service.movie.MovieListService;
 import com.leisurelife.service.music.ConcertDetailsService;
@@ -210,8 +190,8 @@ public class DealCmdController extends HttpServlet {
 			System.out.println("MovieCommlist request p:" +request);
 			logger.info("MovieCommlist request p:" +request);
 			//获取处理结果
-			MovieCommentService mvs=new MovieCommentServiceImpl();
-			result=mvs.movieCommentRequest(request);
+			CommentService mvs=new CommentServiceImpl();
+			result=mvs.commentRequest(request);
 			System.out.println("MovieCommlist result :" +result);
 			logger.info("MovieCommlist result :" +result);
 			break;
@@ -228,8 +208,8 @@ public class DealCmdController extends HttpServlet {
 			System.out.println("MovieCommSub request p:" +request);
 			logger.info("MovieCommSub request p:" +request);
 			//获取处理结果
-			MovieCommentSubmitService mcss=new MovieCommentSubmitServiceImpl();
-			result=mcss.movieCommentSubmitRequest(request);
+			SubmitService mcss=new SubmitServiceImpl();
+			result=mcss.submitRequest(request);
 			System.out.println("MovieCommSub result :" +result);
 			logger.info("MovieCommSub result :" +result);
 			break;
@@ -253,7 +233,7 @@ public class DealCmdController extends HttpServlet {
 //			beijingOperaDetialsController.doPost(req, resp);
 			request =new HashMap<String,Object>();
 			request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
-			request.put("mid", req.getParameter("mid"));
+			request.put("pid", req.getParameter("pid"));
 			System.out.println("BeijingOperaDetials request p:" +request);
 			logger.info("BeijingOperaDetials request p:" +request);
 			//获取处理结果
@@ -282,7 +262,7 @@ public class DealCmdController extends HttpServlet {
 //			modernDramaDetialsController.doPost(req, resp);
 			request =new HashMap<String,Object>();
 			request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
-			request.put("mid", req.getParameter("mid"));
+			request.put("pid", req.getParameter("pid"));
 			System.out.println("ModernDramaDetials request p:" +request);
 			logger.info("ModernDramaDetials request p:" +request);
 			//获取处理结果
@@ -309,7 +289,7 @@ public class DealCmdController extends HttpServlet {
 //			deliciousDetialsController.doPost(req, resp);
 			request =new HashMap<String,Object>();
 			request.put("cmd", Integer.parseInt(req.getParameter("cmd")));
-			request.put("mid", req.getParameter("mid"));
+			request.put("did", req.getParameter("did"));
 			System.out.println("DeliciousDetials request p:" +request);
 			logger.info("DeliciousDetials request p:" +request);
 			//获取处理结果
@@ -329,8 +309,8 @@ public class DealCmdController extends HttpServlet {
 			System.out.println("DeliciousComment request p:" +request);
 			logger.info("DeliciousComment request p:" +request);
 			//获取处理结果
-			DeliciousCommentService dcs=new DeliciousCommentServiceImpl();
-			result=dcs.deliciousCommentRequest(request);
+			CommentService cs=new CommentServiceImpl();
+			result=cs.commentRequest(request);
 			System.out.println("DeliciousComment result :" +result);
 			logger.info("DeliciousComment result :" +result);
 			break;
@@ -347,8 +327,8 @@ public class DealCmdController extends HttpServlet {
 			System.out.println("DeliciousCommentSubmit request p:" +request);
 			logger.info("DeliciousCommentSubmit request p:" +request);
 			//获取处理结果
-			DeliciousCommentSubmitService dcss=new DeliciousCommentSubmitServiceImpl();
-			result=dcss.deliciousCommentSubmitRequest(request);
+			SubmitService dcss=new SubmitServiceImpl();
+			result=dcss.submitRequest(request);
 			System.out.println("DeliciousCommentSubmit result :" +result);
 			logger.info("DeliciousCommentSubmit result :" +result);
 			break;

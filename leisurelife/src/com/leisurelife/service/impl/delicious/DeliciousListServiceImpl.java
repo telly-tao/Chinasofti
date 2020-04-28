@@ -8,10 +8,7 @@ import java.util.Map;
 import com.google.gson.Gson;
 import com.leisurelife.dao.delicious.DeliciousListDao;
 import com.leisurelife.dao.impl.delicious.DeliciousListDaoImpl;
-import com.leisurelife.dao.impl.movie.MovieListDaoImpl;
-import com.leisurelife.dao.movie.MovieListDao;
 import com.leisurelife.model.Delicacies;
-import com.leisurelife.model.Movie;
 import com.leisurelife.service.delicious.DeliciousListService;
 
 public class DeliciousListServiceImpl implements DeliciousListService {
